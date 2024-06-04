@@ -9,6 +9,15 @@
  * @param {String} string 
  * @returns {String}
  */
+
 const firstNonRepeatedCharacter = function (string) {
-  // TODO: your solution here
-}
+    // TODO: your solution here
+
+   var str=string[string.length-1]
+   for(var i=0;i<string.length;i++){
+    if(string[0]!==str){
+      return str
+  
+    }else{return ''}
+   } 
+  }
