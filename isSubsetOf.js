@@ -16,9 +16,28 @@
  * See http://en.wikipedia.org/wiki/Subset for more on the definition of a
  * subset.
 */
-Array.prototype.isSubsetOf = function (arr) {
-  // your code here
+//Array.prototype.isSubsetOf = function (arr) 
+ function isSubsetOf(arr1,arr2){
+ let arr = []
+  for (var i = 0; i < arr1.length; i++) {
+    if (!arr.includes(arr1[i])) {
+      arr.push(arr1[i]);
+    }
+  }
 
-};
+  
+  for (var i = 0; i < arr.length; i++) {
+    if (!arr2.includes(arr[i])) {
+      return false;
+    }
+  }
 
-/*
+  return true;
+}
+  
+
+;
+
+/** */
+
+
