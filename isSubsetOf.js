@@ -16,24 +16,35 @@
  * See http://en.wikipedia.org/wiki/Subset for more on the definition of a
  * subset.
 */
-//Array.prototype.isSubsetOf = function (arr) 
- function isSubsetOf(arr1,arr2){
- let arr = []
-  for (var i = 0; i < arr1.length; i++) {
-    if (!arr.includes(arr1[i])) {
-      arr.push(arr1[i]);
-    }
-  }
+Array.prototype.isSubsetOf = function (arr){
+  var x=true
+  for(val of this){
+    if(Array.isArray(val)){
+      x=val.isSubsetOf(arr)
+
+    }else if(!arr.includes(val)){
+      x=false
+
+l    }
+  }return x
+} 
+//  function isSubsetOf(arr1,arr2){
+//  let arr = []
+//   for (var i = 0; i < arr1.length; i++) {
+//     if (!arr.includes(arr1[i])) {
+//       arr.push(arr1[i]);
+//     }
+//   }
 
   
-  for (var i = 0; i < arr.length; i++) {
-    if (!arr2.includes(arr[i])) {
-      return false;
-    }
-  }
+//   for (var i = 0; i < arr.length; i++) {
+//     if (!arr2.includes(arr[i])) {
+//       return false;
+//     }
+//   }
 
-  return true;
-}
+//   return true;
+// }
   
 
 ;
